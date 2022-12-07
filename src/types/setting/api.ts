@@ -1,7 +1,6 @@
 export type SettingRes = {
   defaultInterface: string;
-  primaryDomains: string[];
-  bypassIps: string[];
+  trueProxyServer: string;
   localServer: {
     http: { enabled: boolean; port: number };
   };
