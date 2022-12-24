@@ -4,6 +4,6 @@ interface Item {
 }
 
 export interface Dns {
-  primary: Item;
-  secondary: Item;
+  local: Item;
+  remote: Item;
 }
