@@ -3,7 +3,6 @@ import { Ip } from "./ip";
 
 export interface Rule {
   id: string;
-  name: string;
   ip: Ip;
   dns: Dns;
 }
