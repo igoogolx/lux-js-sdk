@@ -1,8 +1,8 @@
 export type RuntimeDetail = {
   directedInterfaceName: string;
   tunInterfaceName: string;
-  primaryDns: string[];
-  secondaryDns: string[];
+  localDns: string[];
+  remoteDns: string[];
 };
 
 export type GetRuntimeDetail = () => Promise<RuntimeDetail>;
