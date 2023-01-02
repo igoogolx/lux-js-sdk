@@ -1,6 +1,7 @@
 import WsClient from "isomorphic-ws";
 
 export interface Log {
+  id: string;
   type: string;
   time: number;
   payload: string;
