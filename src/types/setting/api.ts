@@ -9,3 +9,5 @@ export type SettingRes = {
 export type GetSetting = () => Promise<SettingRes>;
 
 export type SetSetting = (data: SettingRes) => Promise<void>;
+
+export type GetSettingInterfaces = () => Promise<{ name: string }[]>;
