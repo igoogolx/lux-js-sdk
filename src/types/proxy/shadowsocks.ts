@@ -2,8 +2,8 @@ import { BaseProxy } from "./base";
 
 export interface Shadowsocks extends BaseProxy {
   password: string;
-  method: string;
+  cipher: string;
   udp?: boolean;
   plugin?: string;
-  pluginOpts?: Record<string, string>;
+  "plugin-opts"?: Record<string, string>;
 }
