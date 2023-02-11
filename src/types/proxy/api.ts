@@ -1,7 +1,8 @@
 import { Shadowsocks } from "./shadowsocks";
 import { Socks5 } from "./socks5";
+import { Http } from "./http";
 
-export type Proxy = Shadowsocks | Socks5;
+export type Proxy = Shadowsocks | Socks5 | Http;
 
 export type GetProxiesRes = {
   proxies: Proxy[];
