@@ -8,5 +8,5 @@ export interface BaseProxy {
   name: string;
   server: string;
   port: number;
-  type?: ProxyTypeEnum;
+  type: ProxyTypeEnum;
 }
