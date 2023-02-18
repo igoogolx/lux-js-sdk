@@ -68,10 +68,6 @@ class UrlConfig {
   get runtimeDetail() {
     return `${this.httpPrefix}${this.baseUrl}/runtime-detail`;
   }
-
-  get testRule() {
-    return `${this.httpPrefix}${this.baseUrl}/test-rule`;
-  }
 }
 
 export const urtConfig = new UrlConfig();

@@ -12,4 +12,3 @@ export * from "./src/setting";
 export * from "./src/version";
 export * from "./src/runtimeDetail";
 export * from "./src/ping";
-export * from "./src/testRule";
