@@ -33,10 +33,6 @@ export type Delay = {
   value: number;
 };
 
-export type DelayRes = {
-  delays: Delay[];
-};
-
 type GetProxyDelayReq = {
   id: string;
   url?: string;
@@ -44,11 +40,6 @@ type GetProxyDelayReq = {
 export type GetProxyDelay = (
   req: GetProxyDelayReq
 ) => Promise<{ delay: number }>;
-
-type GetProxiesDelayReq = {
-  url?: string;
-};
-export type GetProxiesDelay = (req?: GetProxiesDelayReq) => Promise<DelayRes>;
 
 type TestProxyUpdReq = {
   id: string;

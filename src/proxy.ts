@@ -3,7 +3,6 @@ import {
   AddProxy,
   DeleteProxy,
   GetProxies,
-  GetProxiesDelay,
   GetProxyDelay,
   TestProxyUdp,
   UpdateProxy,
@@ -39,17 +38,6 @@ export const getProxyDelay: GetProxyDelay = async (req) => {
   const { id, url: testUrl = "" } = req;
   const url = `${urtConfig.proxies}/delay/${id}`;
   const res = await axios.get(url, { params: { url: testUrl } });
-  return res.data;
-};
-
-export const getProxiesDelay: GetProxiesDelay = async (req = {}) => {
-  const { url: testUrl = "" } = req;
-  const url = `${urtConfig.proxies}/delays`;
-  let params = {};
-  if (testUrl) {
-    params = { url: testUrl };
-  }
-  const res = await axios.get(url, { params });
   return res.data;
 };
 
