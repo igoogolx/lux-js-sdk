@@ -1,6 +1,7 @@
 import axios from "axios";
 import {
   AddProxy,
+  DeleteAllProxies,
   DeleteProxy,
   GetProxies,
   GetProxyDelay,
@@ -34,7 +35,7 @@ export const deleteProxy: DeleteProxy = async (req) => {
   await axios.delete(url);
 };
 
-export const deleteAllProxies: DeleteProxy = async () => {
+export const deleteAllProxies: DeleteAllProxies = async () => {
   const url = `${urtConfig.proxies}`;
   await axios.delete(url);
 };
