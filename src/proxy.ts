@@ -34,6 +34,11 @@ export const deleteProxy: DeleteProxy = async (req) => {
   await axios.delete(url);
 };
 
+export const deleteAllProxies: DeleteProxy = async () => {
+  const url = `${urtConfig.proxies}`;
+  await axios.delete(url);
+};
+
 export const getProxyDelay: GetProxyDelay = async (req) => {
   const { id, url: testUrl = "" } = req;
   const url = `${urtConfig.proxies}/delay/${id}`;

@@ -28,6 +28,8 @@ type DeleteProxyReq = {
 
 export type DeleteProxy = (req: DeleteProxyReq) => Promise<void>;
 
+export type DeleteAllProxies = () => Promise<void>;
+
 export type Delay = {
   id: string;
   value: number;
