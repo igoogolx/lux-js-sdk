@@ -1,6 +1,7 @@
 import { Shadowsocks } from "./shadowsocks";
 import { Socks5 } from "./socks5";
 import { Http } from "./http";
+import { BaseProxy } from "./base";
 
 export type Proxy = Shadowsocks | Socks5 | Http;
 
@@ -21,6 +22,14 @@ type AddProxyReq = {
 };
 
 export type AddProxy = (req: AddProxyReq) => Promise<{ id: string }>;
+
+type AddProxiesFromClashConfigUrlReq = {
+  url: string;
+};
+
+export type AddProxiesFromClashConfigUrl = (
+  req: AddProxiesFromClashConfigUrlReq
+) => Promise<{ proxies: BaseProxy[] }>;
 
 type DeleteProxyReq = {
   id: string;

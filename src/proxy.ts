@@ -1,5 +1,6 @@
 import axios from "axios";
 import {
+  AddProxiesFromClashConfigUrl,
   AddProxy,
   DeleteAllProxies,
   DeleteProxy,
@@ -28,6 +29,13 @@ export const addProxy: AddProxy = async (req) => {
   const res = await axios.put(url, proxy);
   return res.data;
 };
+
+export const addProxiesFromClashUrlConfig: AddProxiesFromClashConfigUrl =
+  async (req) => {
+    const url = `${urtConfig.proxies}/clash-url`;
+    const res = await axios.put(url, req);
+    return res.data;
+  };
 
 export const deleteProxy: DeleteProxy = async (req) => {
   const { id } = req;
