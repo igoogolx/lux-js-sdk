@@ -31,6 +31,12 @@ export type AddProxiesFromClashConfigUrl = (
   req: AddProxiesFromClashConfigUrlReq
 ) => Promise<{ proxies: BaseProxy[] }>;
 
+export type UpdateClashYamlUrl = (
+  req: AddProxiesFromClashConfigUrlReq
+) => Promise<void>;
+
+export type GetClashYamlUrl = () => Promise<{ url: string }>;
+
 type DeleteProxyReq = {
   id: string;
 };

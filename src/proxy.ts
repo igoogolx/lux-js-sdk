@@ -4,9 +4,11 @@ import {
   AddProxy,
   DeleteAllProxies,
   DeleteProxy,
+  GetClashYamlUrl,
   GetProxies,
   GetProxyDelay,
   TestProxyUdp,
+  UpdateClashYamlUrl,
   UpdateProxy,
 } from "./types";
 import { urtConfig } from "./url";
@@ -36,6 +38,18 @@ export const addProxiesFromClashUrlConfig: AddProxiesFromClashConfigUrl =
     const res = await axios.put(url, req);
     return res.data;
   };
+
+export const updateClashYamlUrl: UpdateClashYamlUrl = async (req) => {
+  const url = `${urtConfig.proxies}/clash-yaml-url`;
+  const res = await axios.post(url, req);
+  return res.data;
+};
+
+export const getClashYamlUrl: GetClashYamlUrl = async () => {
+  const url = `${urtConfig.proxies}/clash-yaml-url`;
+  const res = await axios.get(url);
+  return res.data;
+};
 
 export const deleteProxy: DeleteProxy = async (req) => {
   const { id } = req;
