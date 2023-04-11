@@ -4,6 +4,13 @@ export type SettingRes = {
   localServer: {
     http: { enabled: boolean; port: number };
   };
+  outbound: {
+    mode: "auto" | "select";
+    config: {
+      type: "url-test" | "fallback";
+      url: string;
+    };
+  };
 };
 
 export type GetSetting = () => Promise<SettingRes>;
