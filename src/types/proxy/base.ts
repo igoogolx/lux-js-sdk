@@ -9,4 +9,5 @@ export interface BaseProxy {
   server: string;
   port: number;
   type: ProxyTypeEnum;
+  delay?: number;
 }
