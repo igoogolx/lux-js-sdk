@@ -18,6 +18,6 @@ export type V2rayObfs = {
   host: string;
   port: string;
   path: string;
-  tLS: boolean;
+  tls: boolean;
   skipCertVerify: boolean;
 };
