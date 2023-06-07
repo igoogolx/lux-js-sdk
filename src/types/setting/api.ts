@@ -5,8 +5,8 @@ export type SettingRes = {
     http: { enabled: boolean; port: number };
   };
   outbound: {
-    mode: "auto" | "select";
-    config: {
+    autoMode: {
+      enabled: boolean;
       type: "url-test" | "fallback";
       url: string;
     };
