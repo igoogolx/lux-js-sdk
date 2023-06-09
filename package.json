@@ -1,6 +1,6 @@
 {
   "name": "lux-js-sdk",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "igoogolx",
   "license": "MIT",
   "main": "index.ts",
