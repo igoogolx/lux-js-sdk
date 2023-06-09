@@ -1,4 +1,9 @@
 export type SettingRes = {
+  dns: {
+    boost: string;
+    remote: string;
+    local: string;
+  };
   defaultInterface: string;
   trueProxyServer: string;
   localServer: {
