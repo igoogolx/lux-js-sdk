@@ -9,12 +9,10 @@ export type SettingRes = {
   localServer: {
     http: { enabled: boolean; port: number };
   };
-  outbound: {
-    autoMode: {
-      enabled: boolean;
-      type: "url-test" | "fallback";
-      url: string;
-    };
+  autoMode: {
+    enabled: boolean;
+    type: "url-test" | "fallback";
+    url: string;
   };
 };
 
