@@ -3,6 +3,8 @@ export type RuntimeDetail = {
   tunInterfaceName: string;
   localDns: string[];
   remoteDns: string[];
+  boostDns: string[];
+  proxyServer: string;
 };
 
 export type GetRuntimeDetail = () => Promise<RuntimeDetail>;
