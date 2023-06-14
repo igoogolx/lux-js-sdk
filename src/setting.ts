@@ -1,5 +1,10 @@
 import axios from "axios";
-import { GetSetting, GetSettingInterfaces, SetSetting } from "./types";
+import {
+  GetConfigFileDir,
+  GetSetting,
+  GetSettingInterfaces,
+  SetSetting,
+} from "./types";
 import { urtConfig } from "./url";
 
 export const getSetting: GetSetting = async () => {
@@ -17,4 +22,9 @@ export const getSettingInterfaces: GetSettingInterfaces = async () => {
 export const setSetting: SetSetting = async (data) => {
   const url = `${urtConfig.setting}`;
   await axios.put(url, data);
+};
+
+export const getConfigFileDir: GetConfigFileDir = async () => {
+  const res = await axios.get(`${urtConfig.setting}/config-file-dir-path`);
+  return res.data.path;
 };
