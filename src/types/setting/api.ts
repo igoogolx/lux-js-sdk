@@ -25,3 +25,5 @@ export type NetworkInterface = { Name: string };
 export type GetSettingInterfaces = () => Promise<NetworkInterface[]>;
 
 export type GetConfigFileDir = () => Promise<string>;
+
+export type OpenConfigFileDir = () => Promise<void>;

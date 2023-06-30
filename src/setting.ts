@@ -3,6 +3,7 @@ import {
   GetConfigFileDir,
   GetSetting,
   GetSettingInterfaces,
+  OpenConfigFileDir,
   SetSetting,
 } from "./types";
 import { urtConfig } from "./url";
@@ -27,4 +28,8 @@ export const setSetting: SetSetting = async (data) => {
 export const getConfigFileDir: GetConfigFileDir = async () => {
   const res = await axios.get(`${urtConfig.setting}/config-file-dir-path`);
   return res.data.path;
+};
+
+export const openConfigFileDir: OpenConfigFileDir = async () => {
+  await axios.get(`${urtConfig.setting}/open-config-file-dir`);
 };
